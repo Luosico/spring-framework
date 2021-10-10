@@ -328,6 +328,8 @@ public class ConfigurationClassPostProcessor implements BeanDefinitionRegistryPo
 		Set<ConfigurationClass> alreadyParsed = new HashSet<>(configCandidates.size());
 		do {
 			StartupStep processConfig = this.applicationStartup.start("spring.context.config-classes.parse");
+			// 默认扫描当前包下带 @Configuration(使用 @Component) 的类，若指定 @ComponentScan 路径，则扫描指定路径
+			// @ComponentScan @PropertySource @Import @ImportResource @Bean
 			parser.parse(candidates);
 			parser.validate();
 
