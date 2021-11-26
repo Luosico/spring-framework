@@ -89,7 +89,9 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 * {@link Configuration @Configuration} classes
 	 */
 	public AnnotationConfigApplicationContext(Class<?>... componentClasses) {
+		// 注册基础的 BeanDefinition, 设置基础环境
 		this();
+		// 注册指定类的 BeanDefinition, @Configuration 的方法默认会使用代理
 		register(componentClasses);
 		refresh();
 	}
