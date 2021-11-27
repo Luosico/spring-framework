@@ -268,7 +268,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 				}
 			}
 			// 返回对应的实例
-			// 存在诸如 BeanFactory 的情况并不是直接返回实力本身而是返回指定方法返回的实例
+			// 存在诸如 FactoryBean 的情况并不是直接返回实例本身而是返回指定方法返回的实例，FactoryBean 为 &beanName, 方法返回的bean 为 beanName
 			beanInstance = getObjectForBeanInstance(sharedInstance, name, beanName, null);
 		}
 
