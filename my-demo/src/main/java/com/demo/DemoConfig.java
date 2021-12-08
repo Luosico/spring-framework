@@ -1,6 +1,5 @@
 package com.demo;
 
-import com.another.NameConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class DemoConfig {
 
 	@Autowired
-	private NameConfig nameConfig;
+	private User user;
 
 	public DemoConfig() {
 		System.out.println(this.getClass().getName() + "实例化了");
