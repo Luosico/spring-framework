@@ -134,6 +134,7 @@ class ConstructorResolver {
 		ArgumentsHolder argsHolderToUse = null;
 		Object[] argsToUse = null;
 
+		// 指定构造函数方法参数就直接使用
 		if (explicitArgs != null) {
 			argsToUse = explicitArgs;
 		}
