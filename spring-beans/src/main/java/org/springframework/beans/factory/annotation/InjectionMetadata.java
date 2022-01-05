@@ -116,6 +116,7 @@ public class InjectionMetadata {
 				(checkedElements != null ? checkedElements : this.injectedElements);
 		if (!elementsToIterate.isEmpty()) {
 			for (InjectedElement element : elementsToIterate) {
+				// 设置属性的bean
 				element.inject(target, beanName, pvs);
 			}
 		}
